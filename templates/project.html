@@ -1,0 +1,86 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mi 11x 5G Mobiles</title>
+<link rel="stylesheet" href='{% static "css/project.css" %}'>
+</head>
+<body>
+<div class="main">
+    <nav>
+        <div class="logo">
+            <!-- <img src="mi.jpg"> -->
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="phone.html">Phone</a></li>
+                <li><a href="access.html">Accessories</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="color.html">Color</a></li>
+                <li><a href="form.html">Buy</a></li>
+            </ul>
+        </div>
+    </nav>
+     <div class="information">
+         <div class="overlay"></div>
+         <img src="{% static 'images/mi.jpg' %}" class="mobile">
+      <div id="circle">
+      <div class="feature one">
+        <img src="{% static 'images/came.jpg' %}">
+       <div>
+           <h1>Camera</h1>
+           <p>Triple Camera</p>
+       </div>
+      </div>
+        <div class="feature two">
+            <img src="{% static 'images/process.png' %}">
+            <div>
+                <h1>Processor</h1>
+                <p>octa-core</p>
+            </div>
+        </div>
+        <div class="feature three">
+            <img src="{% static 'images/disp.png' %}">
+            <div>
+                <h1>Display</h1>
+                <p>6.67, "Fullscreen 20:9 ratio</p>
+            </div>
+        </div>
+        <div class="feature four">
+            <img src="{% static 'images/bat.png' %}">
+            <div>
+                <h1>Battery Life</h1>
+                <p>4520mAh, 72 Hrs Standby</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="controls">
+        <img src="{% static 'images/arrow.jpg' %}" id="upBtn">
+        <h3>Features</h3>
+        <img src="{% static 'images/arrow.jpg' %}" id="downBtn">
+    </div>
+</div>
+<script>
+    var circle = document.getElementById("circle");
+    var upBtn = document.getElementById("upBtn");
+    var downBtn = document.getElementById("downBtn");
+    var rotateValue = circle.style.transform;
+    var rotateSum;
+    upBtn.onclick = function()
+    {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+    }
+
+    downBtn.onclick = function()
+    {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+    }
+</script>
+</body>
+</html>

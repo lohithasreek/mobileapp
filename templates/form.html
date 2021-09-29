@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .button{
+        margin-top: 15px;
+        background-color: rgb(121, 121, 22);
+        color:white;
+        padding: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .form{
+      text-align:center;
+    }
+    body{
+      background-color: rgb(105, 128, 128);
+    }
+</style>
+<form action="/add" class="form" method="POST">
+  {% csrf_token %}
+  
+  <lable>Name</lable>
+  <div>{{form.Customer_name}}</div>
+  <lable>Address</lable>
+  <div>{{form.Address}}</div>
+  <lable>Email</lable>
+  <div>{{form.Email}}</div>
+  <lable>Brand</lable>
+  <div>{{form.Brand}}</div>
+  <lable>Color</lable>
+  <div>{{form.Color}}</div>
+  <lable>Contact</lable>
+  <div>{{form.Contact}}</div>
+  <lable>Ordered_Date</lable>
+  <div><input type="date" name="{{form.Ordered_Date}}"></div>
+  <lable>Price</lable>
+  <div>{{form.Price}}</div>
+  <div><button class="button" type="submit">Add</button></div>
+    <!-- <input type="text" placeholder="Customer_name"><br><br>
+    <input type="text" name="Address" placeholder="Address"><br><br>
+    <input type="text" name="Email" placeholder="Email"><br><br>
+    <input type="text" name="Brand" placeholder="Brand"><br><br>
+    <input type="text" name="Color" placeholder="Color"><br><br>
+    <input type="text" name="Contact" placeholder="Contact"><br><br>
+    <input type="date" name="Ordered_Date" placeholder="date"><br><br>
+    <input type="text" name="Price" placeholder="Price"><br><br>
+    <button class="button" type="submit">Add</button>
+  </form> -->
+{% for i in messages %}
+{{i}}
+{% endfor %} 
+</html>

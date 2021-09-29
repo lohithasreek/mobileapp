@@ -1,0 +1,54 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+  <style>
+    button{
+      color:rgb(54, 87, 87);
+    }
+    h2{
+      color:rgb(190,156,42);
+
+    }
+  </style>
+  <center>
+    <a href="/"><button>Project</button></a>&nbsp;&nbsp;&nbsp;
+    <a href="home.html"><button>Home</button></a>&nbsp;&nbsp;&nbsp;
+    <a href="phone.html"><button>Phone</button></a>&nbsp;&nbsp;&nbsp;
+    <a href="camera.html"><button>Camera</button></a>&nbsp;&nbsp;&nbsp;
+    <a href="access.html"><button>Accessories</button></a>
+</center>
+<h1 style=color:crimson;>Colors</h1>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+<body text="blue" bgcolor="sky blue">
+<div class="row">
+    <div class="column">
+        <h2>Black</h2>
+         <img src="{% static 'images/Black.jpg' %}" style="width:80%">
+    </div>
+    <div class="column">
+          <h2>Lunar White</h2>
+           <img src="{% static 'images/White.jpg' %}" style="width:80%">    
+    </div>
+    <div class="column">
+          <h2>Silver</h2>
+           <img src="{% static 'images/Sil.jpg' %}" style="width:80%">
+    </div>
+</div>
+</body>
+</html>
